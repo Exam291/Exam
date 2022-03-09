@@ -1,0 +1,11 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+<title>Home Page</title>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('content'); ?>
+
+<p>hello World</p>
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('Default_View_Template'); } ?>
