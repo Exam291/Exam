@@ -1,0 +1,10 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+<title>Preferences</title>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('content'); ?>
+
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('Staff_View_Template'); } ?>
