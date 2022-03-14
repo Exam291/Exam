@@ -3,18 +3,18 @@
 <?php $this->startSection('title'); ?>
 <title>Signup</title>
 <?php $this->stopSection(); ?>
-<?php $this->startSection('content'); ?>
+<?php $this->startSection('content'); ?> 
 
-<div style=" margin-top: 5vh; margin-bottom: 10vh; margin-left: 5vw; margin-right: 5vw;">
+<div style=" margin-top: 5vh; margin-bottom: 40vh; margin-left: 5vw; margin-right: 5vw;">
  <h1>Sign up for an account!</h1>
- <form action="Createup_Page.php" method="post" >
+ <form action="Signup_Page.php" method="post" >
  <div class="mb-3">
- <label for="userFirstName" class="form-label">First Name:</label>
- <input type="string" class="form-control" id="userFirstName" placeholder="Enter First Name" name="userFirstName">
+ <label for="firstName" class="form-label">First Name:</label>
+ <input type="string" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName">
  </div>
  <div class="mb-3">
- <label for="userLastName" class="form-label">Last Name:</label>
- <input type="string" class="form-control" id="userLastName" placeholder="Enter Last Name" name="userLastName">
+ <label for="lastName" class="form-label">Last Name:</label>
+ <input type="string" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName">
  </div>
  <div class="mb-3 mt-3">
  <label for="email" class="form-label">Email:</label>

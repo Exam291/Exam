@@ -15,7 +15,8 @@ class User_Create{
     public $passwordHash = 'passwordHash';
     public $confirmPasswordHash = 'confirmPasswordHash';
 
-    function __contruct($connection, $firstName, $lastName, $email, $password, $confirmPassword, $dateOfBirth, $gender, $accountType){
+    function __construct($connection, $firstName, $lastName, $email, $password, $confirmPassword, $dateOfBirth, $gender, $accountType)
+    {
         $this->firstName = mysqli_real_escape_string($connection, $firstName);
         $this->lastName = mysqli_real_escape_string($connection, $lastName);
         $this->email = mysqli_real_escape_string($connection, $email);
@@ -29,25 +30,53 @@ class User_Create{
 
         $this->connection = $connection;
     }
+
     function insert() {
-        if ($this->passwordHash == $this->confirmPasswordHash)
+        if ($this->password == $this->confirmPassword)
         {
-            
-            $Append = <<<SQL
-                INSERT INTO users (
+            __construct($connection, $firstName, $lastName, $email, $password, $confirmPassword, $dateOfBirth, $gender, $accountType);
+            if($this->accountType == "Student")
+            {
+                $Append = <<<SQL
+                    INSERT INTO studentusers (
+                        firstName,
+                        lastName,
+                        email,
+                        passwordHash,
+                        dateOfBirth,
+                        gender
+                    )
+                    VALUES (
+                        {$this->firstName},
+                        {$this->lastName},
+                        {$this->email},
+                        {$this->passwordHash},
+                        {$this->dateOfBirth},
+                        {$this->gender},
+                    )
+                SQL;
+            }
+            else
+            {
+                $Append = <<<SQL
+                INSERT INTO StaffUsers (
+                    firstName,
+                    lastName,
                     email,
-                    password
+                    passwordHash,
+                    dateOfBirth,
+                    gender
                 )
                 VALUES (
                     {$this->firstName},
                     {$this->lastName},
                     {$this->email},
-                    {$this->password_hash},
+                    {$this->passwordHash},
                     {$this->dateOfBirth},
                     {$this->gender},
-                    {$this->accountType}
                 )
             SQL;
+            }
         }
 
         $SQLQuery = $this->connection->query($Append);
