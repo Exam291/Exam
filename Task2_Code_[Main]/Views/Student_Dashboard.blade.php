@@ -5,14 +5,11 @@
 @endsection
 @section('content')
 
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
-<p>hello World</p>
+<div class="dashboard-container">
+  <div class="dashboard-Courses"></div>
+  <div class="dashboard-Course-Content"></div>
+  <div class="dashboard-Student-Infographs"></div>
+  <div class="dashboard-Student-Summary"></div>
+</div>
+
 @endsection

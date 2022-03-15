@@ -75,3 +75,22 @@ body{
     background: #EA0C5F;
     color: white;
 }
+
+
+.dashboard-container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  
+  
+  .dashboard-Courses { grid-area: 2 / 2 / 24 / 6; }
+  
+  .dashboard-Course-Content { grid-area: 2 / 20 / 24 / 24; }
+  
+  .dashboard-Student-Infographs { grid-area: 2 / 7 / 20 / 19; }
+  
+  .dashboard-Student-Summary { grid-area: 21 / 7 / 24 / 19; }
+  
+  

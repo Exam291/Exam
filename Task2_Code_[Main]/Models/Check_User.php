@@ -1,6 +1,8 @@
 <?php
 
 include_once 'Models/Database_Connection.php';
+include 'Models/Debug.php';
+
 
 class User_Create{
 
@@ -14,6 +16,10 @@ class User_Create{
     public $accountType = 'accountType';
     public $passwordHash = 'passwordHash';
     public $confirmPasswordHash = 'confirmPasswordHash';
+    printDebug();
+    function printDebug() {
+        print("test 1");
+    }
 
     function __construct($connection, $firstName, $lastName, $email, $password, $confirmPassword, $dateOfBirth, $gender, $accountType)
     {
@@ -37,7 +43,7 @@ class User_Create{
             __construct($connection, $firstName, $lastName, $email, $password, $confirmPassword, $dateOfBirth, $gender, $accountType);
             if($this->accountType == "Student")
             {
-                $Append = <<<SQL
+                $Append = "
                     INSERT INTO studentusers (
                         firstName,
                         lastName,
@@ -47,19 +53,18 @@ class User_Create{
                         gender
                     )
                     VALUES (
-                        {$this->firstName},
-                        {$this->lastName},
-                        {$this->email},
-                        {$this->passwordHash},
-                        {$this->dateOfBirth},
-                        {$this->gender},
-                    )
-                SQL;
+                        '{$this->firstName}',
+                        '{$this->lastName}',
+                        '{$this->email}',
+                        '{$this->passwordHash}',
+                        '{$this->dateOfBirth}',
+                        '{$this->gender}'
+                    )";
             }
             else
             {
-                $Append = <<<SQL
-                INSERT INTO StaffUsers (
+                $Append = "
+                INSERT INTO utaffusers (
                     firstName,
                     lastName,
                     email,
@@ -68,14 +73,14 @@ class User_Create{
                     gender
                 )
                 VALUES (
-                    {$this->firstName},
-                    {$this->lastName},
-                    {$this->email},
-                    {$this->passwordHash},
-                    {$this->dateOfBirth},
-                    {$this->gender},
-                )
-            SQL;
+                    '{$this->firstName}',
+                    '{$this->lastName}',
+                    '{$this->email}',
+                    '{$this->passwordHash}',
+                    '{$this->dateOfBirth}',
+                    '{$this->gender}'
+                )";
+            
             }
         }
 
