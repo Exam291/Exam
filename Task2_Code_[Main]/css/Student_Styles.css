@@ -1,12 +1,7 @@
-#container {
-    position: relative;
-    min-height: 100vh;
-}
-
 footer{
-    position: absolute;
+    position: relative;
     left: 0%;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 2.5rem;           
     height: fit-content;
@@ -79,18 +74,41 @@ body{
 
 .dashboard-container {  display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh;
     gap: 0px 0px;
     grid-auto-flow: row;
-  }
+    margin: 2vw;
+    position: relative;
+    min-height: 70vh;
+}
   
   
-  .dashboard-Courses { grid-area: 2 / 2 / 24 / 6; }
+.dashboard-Courses { 
+    grid-area: 2 / 2 / 24 / 6; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
   
-  .dashboard-Course-Content { grid-area: 2 / 20 / 24 / 24; }
+.dashboard-Course-Content { 
+    grid-area: 2 / 20 / 24 / 24; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
   
-  .dashboard-Student-Infographs { grid-area: 2 / 7 / 20 / 19; }
+.dashboard-Student-Infographs { 
+    grid-area: 2 / 7 / 20 / 19; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
   
-  .dashboard-Student-Summary { grid-area: 21 / 7 / 24 / 19; }
+.dashboard-Student-Summary { 
+    grid-area: 21 / 7 / 24 / 19; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
   
   

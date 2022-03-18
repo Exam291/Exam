@@ -1,6 +1,7 @@
 <?php
 
-include_once 'Models/Database_Connection.php';
+include_once 'Database_Connection.php';
+
 
 
 $email = $_POST['email'];
@@ -21,13 +22,24 @@ $FetchStaffUser = "
             ";
 $FetchStudentQuery = $connection->query($FetchStaffUser);
 $FetchStaffQuery = $connection->query($FetchStudentUser);
+$FetchStaffArray = mysqli_fetch_assoc($FetchStaffQuery);
+$FetchStudentArray = mysqli_fetch_assoc($FetchStudentQuery);
+$FetchStaffString = $FetchStaffArray[];
+$FetchStudentString = $FetchStudentArray[];
 
+print("1");
 
 if (($FetchStaffQuery != null) || ($FetchStudentQuery != null)){
-    if (($passwordHash == $FetchStaffQuery) || ($passwordHash == $FetchStudentQuery) ){
-        echo $blade->run("Student_Dashboard",array());
+    if ($passwordHash == $FetchStaffQuery){
+        echo $blade->run("./Staff_Dashboard",array());
+        print("2");
+    }
+    else {
+        echo $blade->run("./Student_Dashboard",array());
+        print("3");
     }
 }
-elseif (($FetchStaffQuery == null) && ($FetchStudentQuery == null)){
-    echo $blade->run("Staff_Dashboard",array());
+else {
+    echo $blade->run("./Student_Dashboard", array());
+    print("4");
 }

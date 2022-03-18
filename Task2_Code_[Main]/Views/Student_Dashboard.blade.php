@@ -1,7 +1,7 @@
 @extends('Student_View_Template')
 
 @section('title')
-<title>Dahsboard</title>
+<title>Dashboard</title>
 @endsection
 @section('content')
 
