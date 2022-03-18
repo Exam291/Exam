@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Library/Blade_Setup.php';
+
 $hostname = "localhost";
 $username = "root";
 $password = "";
