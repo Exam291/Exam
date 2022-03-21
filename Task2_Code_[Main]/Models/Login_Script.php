@@ -6,37 +6,39 @@ include_once 'Database_Connection.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
-$passwordHash = $_POST['password'];
 
 $email = mysqli_real_escape_string($connection, $email);
 $password = mysqli_real_escape_string($connection, $password);
-$passwordHash = mysqli_real_escape_string($connection, $password);
-$passwordHash = password_hash($password, PASSWORD_BCRYPT);
+
 
 
 $FetchStudentUser = "
-            SELECT passwordHash FROM studentusers WHERE email = '{$email}';
+            SELECT Password FROM studentusers WHERE email = '{$email}';
             ";
 $FetchStaffUser = "
-            SELECT passwordHash FROM staffusers WHERE email = '{$email}'
+            SELECT Password FROM staffusers WHERE email = '{$email}'
             ";
-$FetchStudentQuery = $connection->query($FetchStaffUser);
-$FetchStaffQuery = $connection->query($FetchStudentUser);
+$FetchStudentQuery = $connection->query($FetchStudentUser);
+$FetchStaffQuery = $connection->query($FetchStaffUser);
 $FetchStaffArray = mysqli_fetch_assoc($FetchStaffQuery);
 $FetchStudentArray = mysqli_fetch_assoc($FetchStudentQuery);
-$FetchStaffString = $FetchStaffArray[];
-$FetchStudentString = $FetchStudentArray[];
+$FetchStaffString = implode($FetchStaffArray);
+$FetchStudentString = implode($FetchStudentArray);
+
+
 
 print("1");
 
 if (($FetchStaffQuery != null) || ($FetchStudentQuery != null)){
-    if ($passwordHash == $FetchStaffQuery){
+    if ($password == $FetchStaffString){
         echo $blade->run("./Staff_Dashboard",array());
         print("2");
+        print($FetchStaffString);
     }
-    else {
+    elseif ($password == $FetchStudentString) {
         echo $blade->run("./Student_Dashboard",array());
         print("3");
+        print($FetchStudentString);
     }
 }
 else {

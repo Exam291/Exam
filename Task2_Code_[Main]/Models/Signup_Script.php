@@ -11,8 +11,6 @@ $confirmPassword = $_POST['confirmPassword'];
 $dateOfBirth = $_POST['dateOfBirth'];
 $gender = $_POST['gender'];
 $accountType = $_POST['accountType'];
-$passwordHash = $_POST['password'];
-$confirmPasswordHash = $_POST['confirmPassword'];
 
 
 
@@ -24,8 +22,7 @@ $confirmPassword = mysqli_real_escape_string($connection, $confirmPassword);
 $dateOfBirth = mysqli_real_escape_string($connection, $dateOfBirth);
 $gender = mysqli_real_escape_string($connection, $gender);
 $accountType = mysqli_real_escape_string($connection, $accountType);
-$passwordHash = password_hash($password, PASSWORD_BCRYPT);
-$confirmPasswordHash = password_hash($confirmPassword, PASSWORD_BCRYPT);
+
 
 
 
@@ -38,7 +35,7 @@ if ($password == $confirmPassword)
                 firstName,
                 lastName,
                 email,
-                passwordHash,
+                Password,
                 dateOfBirth,
                 gender
             )
@@ -46,7 +43,7 @@ if ($password == $confirmPassword)
                 '{$firstName}',
                 '{$lastName}',
                 '{$email}',
-                '{$passwordHash}',
+                '{$password}',
                 '{$dateOfBirth}',
                 '{$gender}'
             )";
@@ -60,7 +57,7 @@ if ($password == $confirmPassword)
             firstName,
             lastName,
             email,
-            passwordHash,
+            Password,
             dateOfBirth,
             gender
         )
@@ -68,7 +65,7 @@ if ($password == $confirmPassword)
             '{$firstName}',
             '{$lastName}',
             '{$email}',
-            '{$passwordHash}',
+            '{$password}',
             '{$dateOfBirth}',
             '{$gender}'
         )";

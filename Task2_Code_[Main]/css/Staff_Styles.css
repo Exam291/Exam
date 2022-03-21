@@ -4,9 +4,9 @@
 }
 
 footer{
-    position: absolute;
+    position: relative;
     left: 0%;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 2.5rem;           
     height: fit-content;
@@ -75,3 +75,115 @@ body{
     background: #EA0C5F;
     color: white;
 }
+
+
+.dashboard-container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    margin: 2vw;
+    position: relative;
+    min-height: 70vh;
+}
+  
+  
+.dashboard-students { 
+    grid-area: 2 / 2 / 24 / 6; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+  
+.dashboard-student-courses { 
+    grid-area: 2 / 20 / 24 / 24; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+  
+.dashboard-Student-progress-Infographs { 
+    grid-area: 2 / 7 / 20 / 19; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+  
+.dashboard-staff-signup-code { 
+    grid-area: 21 / 7 / 24 / 19; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+
+
+.staff-students-container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+  
+.staff-students-filter {
+    grid-area: 2 / 2 / 14 / 4;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed; 
+}
+
+.staff-students-list { 
+    grid-area: 2 / 5 / 14 / 14;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+
+
+
+.staff-student-courses-container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+  
+.staff-students-courses-filter {
+    grid-area: 2 / 2 / 14 / 4;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed; 
+}
+
+.staff-students-courses-list { 
+    grid-area: 2 / 5 / 14 / 14;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+
+
+
+.preferences-container { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+  
+  .preferences-list { 
+    grid-area: 2 / 2 / 14 / 4;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+  
+  .preferences-options { 
+    grid-area: 2 / 5 / 14 / 14;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+  

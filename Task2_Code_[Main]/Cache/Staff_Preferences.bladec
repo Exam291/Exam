@@ -5,6 +5,10 @@
 <?php $this->stopSection(); ?>
 <?php $this->startSection('content'); ?>
 
+<div class="preferences-container">
+ <div class="preferences-list"></div>
+ <div class="preferences-options"></div>
+</div>
 
 <?php $this->stopSection(); ?>
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('Staff_View_Template'); } ?>

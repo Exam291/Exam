@@ -5,5 +5,9 @@
 @endsection
 @section('content')
 
+<div class="staff-students-container">
+    <div class="staff-students-filter"></div>
+    <div class="staff-students-list"></div>
+</div>
 
 @endsection

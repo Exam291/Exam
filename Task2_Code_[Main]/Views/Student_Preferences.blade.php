@@ -5,5 +5,10 @@
 @endsection
 @section('content')
 
+<div class="preferences-container">
+    <div class="preferences-list"></div>
+    <div class="preferences-options"></div>
+</div>
+
 
 @endsection

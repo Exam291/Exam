@@ -5,6 +5,10 @@
 <?php $this->stopSection(); ?>
 <?php $this->startSection('content'); ?>
 
+<div class="staff-students-courses-container">
+ <div class="student-courses-filter"></div>
+ <div class="student-courses-content"></div>
+</div>
 
 <?php $this->stopSection(); ?>
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('Staff_View_Template'); } ?>
