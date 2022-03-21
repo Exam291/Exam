@@ -27,21 +27,12 @@ $FetchStudentString = implode($FetchStudentArray);
 
 
 
-print("1");
 
 if (($FetchStaffQuery != null) || ($FetchStudentQuery != null)){
     if ($password == $FetchStaffString){
-        echo $blade->run("./Staff_Dashboard",array());
-        print("2");
-        print($FetchStaffString);
     }
     elseif ($password == $FetchStudentString) {
-        echo $blade->run("./Student_Dashboard",array());
-        print("3");
-        print($FetchStudentString);
     }
 }
 else {
-    echo $blade->run("./Student_Dashboard", array());
-    print("4");
 }

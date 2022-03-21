@@ -149,14 +149,14 @@ body{
     grid-auto-flow: row;
 }
   
-.staff-students-courses-filter {
+.staff-student-courses-filter {
     grid-area: 2 / 2 / 14 / 4;
     border: thin solid #565656;
     border-radius: 5px;
     background-color: #ededed; 
 }
 
-.staff-students-courses-list { 
+.staff-student-courses-list { 
     grid-area: 2 / 5 / 14 / 14;
     border: thin solid #565656;
     border-radius: 5px;

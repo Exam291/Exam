@@ -5,9 +5,9 @@
 @endsection
 @section('content')
 
-<div class="staff-students-courses-container">
-    <div class="student-courses-filter"></div>
-    <div class="student-courses-content"></div>
+<div class="staff-student-courses-container">
+    <div class="staff-student-courses-filter"></div>
+    <div class="staff-student-courses-list"></div>
 </div>
 
 @endsection
