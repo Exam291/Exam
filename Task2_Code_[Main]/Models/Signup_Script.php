@@ -2,6 +2,7 @@
 
 include 'Database_Connection.php';
 
+$Status = true;
 
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
@@ -25,13 +26,50 @@ $accountType = mysqli_real_escape_string($connection, $accountType);
 
 
 
+$FetchStudentUsers = "
+            SELECT * FROM studentusers WHERE email = '{$email}';
+            ";
+$FetchStaffUsers = "
+            SELECT * FROM staffusers WHERE email = '{$email}'
+            ";
+$FetchStudentQuery = $connection->query($FetchStudentUsers);
+$FetchStaffQuery = $connection->query($FetchStaffUsers);
 
-if ($password == $confirmPassword)
+
+
+
+
+
+if (($FetchStaffQuery == null) && ($FetchStudentQuery == null))
 {
-    if($accountType == "Student")
+    if ($password == $confirmPassword)
     {
-        $Append = "
-            INSERT INTO studentusers (
+        if($accountType == "Student")
+        {
+            $Append = "
+                INSERT INTO studentusers (
+                    firstName,
+                    lastName,
+                    email,
+                    Password,
+                    dateOfBirth,
+                    gender
+                )
+                VALUES (
+                    '{$firstName}',
+                    '{$lastName}',
+                    '{$email}',
+                    '{$password}',
+                    '{$dateOfBirth}',
+                    '{$gender}'
+                )";
+                $SQLQuery = $connection->query($Append);
+        }
+    
+        else
+        {
+            $Append = "
+            INSERT INTO staffusers (
                 firstName,
                 lastName,
                 email,
@@ -48,35 +86,12 @@ if ($password == $confirmPassword)
                 '{$gender}'
             )";
             $SQLQuery = $connection->query($Append);
-    }
-
-    else
-    {
-        $Append = "
-        INSERT INTO staffusers (
-            firstName,
-            lastName,
-            email,
-            Password,
-            dateOfBirth,
-            gender
-        )
-        VALUES (
-            '{$firstName}',
-            '{$lastName}',
-            '{$email}',
-            '{$password}',
-            '{$dateOfBirth}',
-            '{$gender}'
-        )";
-        $SQLQuery = $connection->query($Append);
-    
+        } 
     }
     if(!$SQLQuery){
         die("MYSQL query failed - please try again." . mysqli_error($connection));
     }
 }
-
-
-
-
+else {
+    $Status = "false";
+}

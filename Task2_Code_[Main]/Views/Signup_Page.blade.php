@@ -7,7 +7,7 @@
 
 <div style=" margin-top: 5vh; margin-bottom: 40vh; margin-left: 5vw; margin-right: 5vw;">
     <h1>Sign up for an account!</h1>
-    <form action="Models/Signup_Script.php" method="post" >
+    <form action="Signup_Handling.php" method="post" >
         <div class="mb-3">
             <label for="firstName" class="form-label">First Name:</label>
             <input type="string" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName">

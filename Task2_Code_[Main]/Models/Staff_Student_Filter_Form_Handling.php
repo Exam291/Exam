@@ -15,7 +15,7 @@ $email = mysqli_real_escape_string($connection, $email);
 $dateOfBirth = mysqli_real_escape_string($connection, $dateOfBirth);
 $gender = mysqli_real_escape_string($connection, $gender);
 
-
+ 
 
 $FetchStudentFirstName = "
             SELECT * FROM studentusers WHERE firstName = '{$firstName}';
@@ -55,3 +55,4 @@ $FetchStudentLastNameString = implode($FetchStudentLastNameArray);
 $FetchStudentEmailString = implode($FetchStudentEmailArray);
 $FetchStudentDateOfBirthString = implode($FetchStudentDateOfBirthArray);
 $FetchStudentGenderString = implode($FetchStudentGenderArray);
+
