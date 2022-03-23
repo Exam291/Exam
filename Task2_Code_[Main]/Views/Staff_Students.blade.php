@@ -35,8 +35,25 @@
         </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-    <div class="staff-students-list">
-        {{ $studentArray }}
+    <div id="staff-students-list" class="table .table-bordered">
+        <thead>
+            <th> Student ID </th>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Email </th>
+            <th> Date Of Birth </th>
+            <th> Gender </th>
+        </thead>
+        @while ($student = $MatchingEntries)
+        <tr id="{{$student['StudentID']}}">
+            <td>{{$student['StudentID']}}</td>
+            <td>{{$student['FirstName']}}</td>
+            <td>{{$student['LastName']}}</td>
+            <td>{{$student['Email']}}</td>
+            <td>{{$student['DateOfBirth']}}</td>
+            <td>{{$student['Gender']}}</td>
+        </tr>
+        @endwhile
     </div>
 </div>
 

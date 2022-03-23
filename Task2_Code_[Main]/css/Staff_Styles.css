@@ -132,7 +132,7 @@ body{
     background-color: #ededed; 
 }
 
-.staff-students-list { 
+#staff-students-list { 
     grid-area: 2 / 5 / 14 / 14;
     border: thin solid #565656;
     border-radius: 5px;

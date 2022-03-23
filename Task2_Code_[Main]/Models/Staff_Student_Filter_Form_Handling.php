@@ -74,6 +74,10 @@ $gender = mysqli_real_escape_string($connection, $gender);
 // $FetchStudentDateOfBirthString = implode($FetchStudentDateOfBirthArray);
 // $FetchStudentGenderString = implode($FetchStudentGenderArray);
 
-$FetchStudents = "
-             SELECT * FROM studentusers WHERE firstName = '{$firstName}' AND lastname = '{$lastName}' AND email = '{$email}' AND dateofbirth = '{$dateOfBirth}' AND gender = '{$gender}';
-             ";
+$FetchStudentsQuery = "
+                SELECT * FROM studentusers WHERE firstName = '{$firstName}' AND lastname = '{$lastName}' AND email = '{$email}' AND dateofbirth = '{$dateOfBirth}' AND gender = '{$gender}';
+                ";
+
+$FetchStudentsqueryResult = mysqli_query($connection, $FetchStudentsQuery);
+
+$MatchingEntries = mysqli_fetch_assoc($FetchStudentsqueryResult);
