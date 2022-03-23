@@ -9,6 +9,7 @@ if ($loginSuccess == true){
     if ($accountType == "Student") {
         if ($loginSuccess == true){
             echo $blade->run("Student_Dashboard", array());
+            $_SESSION["verification"] = setcookie("verification", $email, time() + (86400 * 30), "/");
         }
         else{
             echo $blade->run("Login_Page", array());
@@ -18,6 +19,7 @@ if ($loginSuccess == true){
     elseif ($accountType == "Teacher"){
         if ($loginSuccess == true){
             echo $blade->run("Staff_Dashboard", array());
+            $_SESSION["verification"] = setcookie("verification", $email, time() + (86400 * 30), "/");
         }
         else{
             echo $blade->run("Login_Page", array());

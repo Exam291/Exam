@@ -13,6 +13,7 @@ if ($Status != true){
         }
         else{
             echo $blade->run("Login_Page", array());
+            print("2");
         }
     }
     
@@ -24,10 +25,8 @@ if ($Status != true){
             echo $blade->run("Login_Page", array());
         }
     }
-    else {
-        echo $blade->run("Signup_Page", array());
-    }
 }
 else {
-    echo $blade->run("Signup_Page", array());
+    echo $blade->run("Login_Page", array());
+    print("1");
 }

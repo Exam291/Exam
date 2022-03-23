@@ -25,6 +25,7 @@ if ($accountType == "Student"){
         $FetchStudentString = implode($FetchStudentArray);
     }
 }
+
 if ($accountType == "Teacher"){
         $FetchStaffUser = "
         SELECT Password FROM staffusers WHERE email = '{$email}'

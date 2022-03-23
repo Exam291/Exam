@@ -5,7 +5,7 @@
 @endsection
 @section('content') 
 
-<div style=" margin-top: 5vh; margin-bottom: 40vh; margin-left: 5vw; margin-right: 5vw;">
+<div style=" margin-top: 5vh; margin-bottom: 10vh; margin-left: 5vw; margin-right: 5vw;">
     <h1>Sign up for an account!</h1>
     <form action="Signup_Handling.php" method="post" >
         <div class="mb-3">
