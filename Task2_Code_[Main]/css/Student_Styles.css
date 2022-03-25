@@ -112,7 +112,7 @@ body{
 }
   
 
-.courses-container {  
+.student-courses-container {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
@@ -120,14 +120,14 @@ body{
     grid-auto-flow: row;
 }
   
-.courses-course-list {
+.students-courses-list {
     grid-area: 2 / 2 / 14 / 4;
     border: thin solid #565656;
     border-radius: 5px;
     background-color: #ededed; 
 }
 
-.courses-content { 
+.students-courses-content { 
     grid-area: 2 / 5 / 14 / 14;
     border: thin solid #565656;
     border-radius: 5px;

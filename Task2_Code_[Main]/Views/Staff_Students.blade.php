@@ -45,13 +45,13 @@
             <th> Gender </th>
         </thead>
         @while ($student = $MatchingEntries)
-        <tr id="{{$student['StudentID']}}">
-            <td>{{$student['StudentID']}}</td>
-            <td>{{$student['FirstName']}}</td>
-            <td>{{$student['LastName']}}</td>
-            <td>{{$student['Email']}}</td>
-            <td>{{$student['DateOfBirth']}}</td>
-            <td>{{$student['Gender']}}</td>
+        <tr id="{$student['StudentID']}">
+            <td>{$student['StudentID']}</td>
+            <td>{$student['FirstName']}</td>
+            <td>{$student['LastName']}</td>
+            <td>{$student['Email']}</td>
+            <td>{$student['DateOfBirth']}</td>
+            <td>{$student['Gender']}</td>
         </tr>
         @endwhile
     </div>

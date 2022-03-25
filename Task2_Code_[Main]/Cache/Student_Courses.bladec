@@ -6,8 +6,12 @@
 <?php $this->startSection('content'); ?>
 
 <div class="student-courses-container">
- <div class="students-courses-filter"></div>
- <div class="students-courses-list"></div>
+ <div class="students-courses-list">
+
+ </div>
+ <div class="students-courses-content">
+ 
+ </div>
 </div>
 
 <?php $this->stopSection(); ?>
