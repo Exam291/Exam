@@ -24,7 +24,7 @@
  <th> Date Of Birth </th>
  <th> Gender </th>
  </thead>
- <?php while($Student = $MatchingEntries->fetch_assoc()): ?>
+ <?php while($Student = $MatchingEntries): ?>
  <tr id="{$student['StudentID']}">
  <td>{$student['firstName']}</td>
  <td>{$student['lastName']}</td>

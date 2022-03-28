@@ -3,7 +3,6 @@
 include_once 'Library/Blade_Setup.php';
 include 'Models/Database_Connection.php';
 
-
 if (isset($_POST['email'])){
     $email = $_POST['email'];
     $email = mysqli_real_escape_string($connection, $email);
