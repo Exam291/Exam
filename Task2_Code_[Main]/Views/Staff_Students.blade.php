@@ -15,7 +15,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
-    <div id="staff-students-list" class="table .table-bordered">
+    <table id="staff-students-list" class="table table-bordered">
         <thead>
             <th> Student ID </th>
             <th> First Name </th>
@@ -25,14 +25,15 @@
             <th> Date Of Birth </th>
             <th> Gender </th>
         </thead>
-        @for (sizeof($MatchingEntries))
-        <tr id="{$MatchingEntries['StudentID']}">
-            @foreach ($MatchingEntries as $MatchingEntries)
-            <td>{{$MatchingEntries}}</td>
+        @foreach ($MatchingEntriesCount as $rowNum)
+            <tr>
+            @foreach ($rowNum as $row)
+                <td>{{$row}}</td>
             @endforeach
-        </tr>
-        @endfor
-    </div>
+            </tr>
+        @endforeach
+
+    </table>
 </div>
 
 @endsection

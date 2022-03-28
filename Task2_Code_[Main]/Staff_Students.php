@@ -11,6 +11,6 @@ $FetchStudentsQuery = "
                 
 $FetchStudentsqueryResult = $connection->query($FetchStudentsQuery);
 $MatchingEntries = mysqli_fetch_assoc($FetchStudentsqueryResult);
-echo $blade->run("Staff_Students",array("MatchingEntries"=>$MatchingEntries[]));
+echo $blade->run("Staff_Students",array("MatchingEntries"=>$MatchingEntries, "MatchingEntriesCount"=>$FetchStudentsqueryResult));
 
 
