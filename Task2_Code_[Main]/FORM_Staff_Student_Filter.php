@@ -13,7 +13,7 @@ if (isset($_POST['email'])){
 
 else{
     $FetchStudentsQuery = "
-                    SELECT * FROM studentusers';
+                    SELECT * FROM studentusers;
                     ";
 }
 

@@ -13,8 +13,6 @@ $accountType = $_POST['accountType'];
 $email = mysqli_real_escape_string($connection, $email);
 $password = mysqli_real_escape_string($connection, $password);
 
-
-
 if ($accountType == "Student"){
     $FetchStudentUser = "
     SELECT password FROM studentusers WHERE email = '{$email}';

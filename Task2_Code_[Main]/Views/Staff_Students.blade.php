@@ -21,18 +21,17 @@
             <th> First Name </th>
             <th> Last Name </th>
             <th> Email </th>
+            <th> password </th>
             <th> Date Of Birth </th>
             <th> Gender </th>
         </thead>
-        @while ($Student = $MatchingEntries)
-        <tr id="{$student['StudentID']}">
-            <td>{$student['firstName']}</td>
-            <td>{$student['lastName']}</td>
-            <td>{$student['email']}</td>
-            <td>{$student['dateOfBirth']}</td>
-            <td>{$student['gender']}</td>
+        @for (sizeof($MatchingEntries))
+        <tr id="{$MatchingEntries['StudentID']}">
+            @foreach ($MatchingEntries as $MatchingEntries)
+            <td>{{$MatchingEntries}}</td>
+            @endforeach
         </tr>
-        @endwhile
+        @endfor
     </div>
 </div>
 
