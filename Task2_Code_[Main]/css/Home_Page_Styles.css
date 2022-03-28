@@ -4,9 +4,9 @@
 }
 
 footer{
-    position: absolute;
+    position: relative;
     left: 0%;
-    bottom: 0;
+    bottom: 0vh;
     width: 100%;
     height: 2.5rem;           
     height: fit-content;
@@ -14,7 +14,10 @@ footer{
 }
 
 body{
-    background-image: linear-gradient(rgb(60, 156, 168), rgb(10, 238, 150));
+    /* background-image: linear-gradient(rgb(60, 156, 168), rgb(10, 238, 150)); */
+    background-image: url("hexagon background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .navbar{
     background-color: #ededed;
@@ -75,4 +78,56 @@ body{
     margin-left: auto;
     background: #EA0C5F;
     color: white;
+}
+
+
+
+.home-container { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    height: 100%;
+    margin: 0;
+}
+  
+.home-image-1 { 
+    grid-area: 2 / 2 / 8 / 7; 
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-image: url("Education.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.home-text-1 {
+    grid-area: 2 / 8 / 8 / 14;       
+    background-image: linear-gradient(rgb(120, 196, 206), rgb(117, 106, 218));
+    color: #31292d;
+    text-align: center;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+
+  .home-image-2 { 
+    grid-area: 9 / 9 / 15 / 14;       
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-image: url("edutech.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  .home-text-2 { grid-area: 9 / 2 / 15 / 8;       
+
+    /* background-image: linear-gradient(rgb(120, 196, 206), rgb(117, 106 , 218)); */
+    background-image: linear-gradient(rgb(117, 106, 218), rgb(10, 238, 150)); 
+
+    color: #31292d;
+    text-align: center;
+    border: thin solid #565656;
+    border-radius: 5px;
+    background-color: #ededed;
 }

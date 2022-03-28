@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 
-<div style=" margin-top: 5vh; margin-bottom: 10vh;">
+<div style="margin-top: 5vh; margin-bottom: 10vh; margin-left: 5vw; margin-right: 5vw;">
     <h1>Log in</h1>
 
     <form action="Login_Handling.php" method="post">
@@ -25,7 +25,8 @@
                 <option value="Student">Student</option>
             </select>
         </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 @endsection

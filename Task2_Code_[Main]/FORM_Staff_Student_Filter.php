@@ -1,15 +1,25 @@
 <?php
 
-
 include_once 'Library/Blade_Setup.php';
 include 'Models/Database_Connection.php';
-include 'Models/Staff_Student_Filter_Form_Handling.php';
 
 
+if (isset($_POST['email'])){
+    $email = $_POST['email'];
+    $email = mysqli_real_escape_string($connection, $email);
+    $FetchStudentsQuery = "
+                    SELECT * FROM studentusers WHERE email = '{$email}';
+                    ";
+}
 
+else{
+    $FetchStudentsQuery = "
+                    SELECT * FROM studentusers';
+                    ";
+}
 
-echo $blade->run("Staff_Students", array($MatchingEntries));
+$FetchStudentsqueryResult = $connection->query($FetchStudentsQuery);
 
+$MatchingEntries = mysqli_fetch_assoc($FetchStudentsqueryResult);
 
-
-
+echo $blade->run("Staff_Students",array("MatchingEntries"=>$MatchingEntries));
