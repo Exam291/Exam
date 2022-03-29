@@ -25,13 +25,14 @@
             <th> Date Of Birth </th>
             <th> Gender </th>
         </thead>
-        @foreach ($MatchingEntriesCount as $rowNum)
+        @for ($rowNum = 1; $rowNum <= $maxPosition/7; $rowNum++)
             <tr>
-            @foreach ($rowNum as $row)
+            @foreach ($MatchingEntries as $row)
                 <td>{{$row}}</td>
             @endforeach
             </tr>
-        @endforeach
+        @endfor
+
 
     </table>
 </div>

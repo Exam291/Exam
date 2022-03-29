@@ -156,7 +156,7 @@ body{
     background-color: #ededed; 
 }
 
-.staff-student-courses-list { 
+#staff-student-courses-list { 
     grid-area: 2 / 5 / 14 / 14;
     border: thin solid #565656;
     border-radius: 5px;
