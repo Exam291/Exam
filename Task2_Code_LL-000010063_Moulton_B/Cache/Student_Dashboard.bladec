@@ -1,0 +1,16 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+<title>Dashboard</title>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('content'); ?>
+
+<div class="dashboard-container">
+ <div class="dashboard-Courses"></div>
+ <div class="dashboard-Course-Content"></div>
+ <div class="dashboard-Student-Infographs"></div>
+ <div class="dashboard-Student-Summary"></div>
+</div>
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('Student_View_Template'); } ?>
